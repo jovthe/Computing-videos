@@ -1,0 +1,24 @@
+#key:value
+
+#name_of_dict = {key1 : value1, key2 : value2}
+
+student = {
+    'School' : 'XYZ school',
+    'Class' : 12,
+    'Age' : 15,
+    'Name' : ['Tan', 'Ah ', 'Seng'],
+    'Male' : True
+}
+
+
+#student = dict(School = 'XYZ school', Class = 12, Age = 15, Name = ['Tan', 'Ah', 'Seng'], Male = True)
+
+
+print(student)
+print(student['School'])
+print(student.get('School'))
+print(student.keys())
+print(student.values())
+print('Name' in student)
+print(15 in student.values())
+print(len(student))
