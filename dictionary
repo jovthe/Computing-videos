@@ -22,3 +22,48 @@ print(student.values())
 print('Name' in student)
 print(15 in student.values())
 print(len(student))
+
+
+
+
+
+
+
+
+student = {
+    'School' : 'XYZ school',
+    'School' : 'ABC school',
+    'Class' : 12,
+    'Age' : 15,
+    'Name' : ['Tan', 'Ah ', 'Seng'],
+    'Male' : True
+}
+
+
+print(len(student))
+print(student['School'])
+
+student['Class'] = 13
+student['Height'] = 1.6
+print(student)
+
+student = {
+    'School' : 'XYZ school',
+    'School' : 'ABC school',
+    'Class' : 12,
+    'Age' : 15,
+    'Name' : ['Tan', 'Ah ', 'Seng'],
+    'Male' : True
+}
+
+student.update({'Height' : 1.6})
+student.update({'Class' : 13})
+print(student)
+
+student.pop('Height')
+print(student)
+del student['Male']
+print(student)
+
+del student
+print(student)
