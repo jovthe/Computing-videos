@@ -1,0 +1,35 @@
+f = open('data.txt', 'r')
+#print(f.read())
+lines = f.readlines()
+print(lines) #list with each line as 1 item
+
+new_lines = []
+for line in lines:
+  result = line.strip() #removes '/n'
+  new_lines.append(result)
+print(new_lines)
+
+f.close() #always close after using it
+
+
+
+#f = open('data2.txt', 'a')  #appends to the back
+#f.write('New Content')
+#f.close()
+#
+#f = open('data2.txt', 'r')
+#print(f.read())
+
+
+f = open('data2.txt', 'w') #overwrites the existing data
+f.write('New Content')
+f.close()
+
+f = open('data2.txt', 'r')
+print(f.read())
+
+
+
+f = open(file_name, 'x')
+
+f = open(file_name, 'w')
