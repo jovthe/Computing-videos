@@ -1,0 +1,38 @@
+#iterative
+def binarysearch(data,target):
+  low=0
+  high=len(data)-1
+  while low<=high:
+    mid=(low+high)//2
+    if data[mid]==target:
+      return mid
+    elif data[mid]<target:
+      low=mid+1
+    else:
+      high=mid-1
+  return "not found"
+
+data=[1,2,3,4,5,6,7,8]
+print(binarysearch(data,3))
+print(binarysearch(data,9))
+
+#recursive
+def binarysearch(data,target,high,low):
+  if low>high:
+    return "not found"
+  mid=(high+low)//2
+  if data[mid]==target:
+    return mid
+  elif data[mid]>target:
+    high=mid-1
+    return binarysearch(data,target,high,low)
+  else:
+    low=mid+1
+    return binarysearch(data,target,high,low)
+
+
+data=[1,2,3,4,5,6,7,8,1]
+low=0
+high=len(data)-1
+print(binarysearch(data,5,high,low))
+print(binarysearch(data,9,high,low))
