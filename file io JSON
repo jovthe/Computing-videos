@@ -1,0 +1,44 @@
+import json
+
+data = {
+  "name": "John Doe",
+  "age": 30,
+  "city": "Exampleville",
+  "isStudent": False,
+  "grades": [85, 90, 78],
+  "address": {
+    "street": "123 Main St",
+    "zipCode": "12345"
+  },
+  "contacts": [
+    {
+      "type": "email",
+      "value": "john.doe@example.com"
+    },
+    {
+      "type": "phone",
+      "value": "+1-555-123-4567"
+    }
+  ]
+}
+
+with open('person.json', 'w') as json_file:
+    json.dump(data, json_file, indent = 2)
+
+
+
+
+import json
+with open('person.json') as user_file:
+  file_contents = user_file.read()
+
+print(file_contents)
+#print(file_contents["name"])
+parsed_json = json.loads(file_contents)
+print(parsed_json)
+print(parsed_json["name"])
+
+#with open('person.json') as user_file:
+  #parsed_json = json.load(user_file)
+
+#print(parsed_json)
