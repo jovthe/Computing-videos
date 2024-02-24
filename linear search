@@ -1,0 +1,44 @@
+def linearsearch(data,target):    #iterative
+  result=[]
+  for i in range(len(data)):
+    if data[i]==target:
+      result.append(i)
+  if result!=[]:
+    return result
+  else:
+    return "not found"
+
+
+data=[5,6,7,8,1,2,3,4,1,2,3,4,5,6,7,8]
+print(linearsearch(data,4))
+print(linearsearch(data,6))
+print(linearsearch(data,9))
+
+#####################################################
+
+#def linearsearch(arr, curr_index, key):    #recursive
+#    if curr_index == -1:
+#        return -1
+#    if arr[curr_index] == key:
+#        return curr_index
+#    return linearsearch(arr, curr_index-1, key)
+#
+#data=[5,6,7,8,1,2,3,4,1,2,3,4,5,6,7,8]
+#print(linearsearch(data, len(data)-1, 4))
+#print(len(data))
+
+def linearsearch(arr, curr_index, key):
+    if curr_index == -1:
+        return []
+
+    positions = linearsearch(arr, curr_index - 1, key)
+
+    if arr[curr_index] == key:
+        positions.append(curr_index)
+
+    return positions
+
+data = [5, 6, 7, 8, 1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 7, 8]
+result = linearsearch(data, len(data) - 1, 4)
+print(result)
+print(len(data))
